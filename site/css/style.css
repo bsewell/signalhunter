@@ -182,6 +182,108 @@ img { max-width: 100%; height: auto; }
   pointer-events: none;
 }
 
+/* Hero with bridge background image */
+.hero-bridge {
+  position: relative;
+  padding: 8rem 2rem 6rem;
+  overflow: hidden;
+  background: linear-gradient(to bottom, rgba(8,9,12,0.55) 0%, rgba(8,9,12,0.85) 100%),
+              url('../img/bridge-hero.jpg') center/cover no-repeat;
+}
+
+.hero-bridge .container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-bridge h1 {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+}
+
+.hero-bridge h1 .gradient-text {
+  background: linear-gradient(135deg, var(--accent-light), var(--accent-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-bridge .subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+
+/* ---- NUMBERED LIST (Best Practices) ---- */
+.numbered-list {
+  counter-reset: best-practice;
+  max-width: 800px;
+  margin: 3rem auto 0;
+}
+
+.numbered-item {
+  counter-increment: best-practice;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem 2rem 2rem 5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  transition: border-color 0.3s;
+}
+
+.numbered-item:hover {
+  border-color: var(--border-accent);
+}
+
+.numbered-item::before {
+  content: counter(best-practice, decimal-leading-zero);
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  opacity: 0.4;
+  position: absolute;
+  left: 1.5rem;
+  top: 1.8rem;
+  line-height: 1;
+}
+
+.numbered-item h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.numbered-item p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.numbered-item .cite {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.numbered-item .cite a {
+  color: var(--accent-light);
+  font-style: normal;
+}
+
 .hero .container {
   position: relative;
   z-index: 2;
